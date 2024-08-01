@@ -1,0 +1,36 @@
+# Ignore virtual environment directory
+venv/
+
+# Ignore other common files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+*.log
+*.pot
+*.pyc
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+*.sqlite3
+.venv
+.env
+.venv/
+.env/
+env/
+env.bak/
+venv.bak/
+hackerton/Django_ORM/

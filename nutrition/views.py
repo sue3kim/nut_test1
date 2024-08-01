@@ -43,4 +43,6 @@ class NutrientRecommendation(APIView):
             nutrient_foods = Food.objects.filter(category=most_deficit)
             response_data['recommendations'] = FoodSerializer(random.sample(list(nutrient_foods), 3), many=True).data
         
+        response_data['deficit'] = most_deficit if total_calories < recommended_calories else 'calories'
+        
         return Response(response_data, status=status.HTTP_200_OK)
