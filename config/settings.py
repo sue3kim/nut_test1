@@ -24,9 +24,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'your-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-print("ALLOWED_HOSTS:", os.getenv('ALLOWED_HOSTS'))
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'port-0-nutrition-lzbaziue05007231.sel4.cloudtype.app').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
+
 CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
@@ -95,10 +95,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'PORT': os.getenv('DB_PORT', '5432'),
 #     }
 # }
-import dj_database_url
-DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-}
+# import dj_database_url
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -134,10 +134,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.getenv('STATIC_ROOT', '/path/to/staticfiles')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.getenv('MEDIA_ROOT', '/path/to/mediafiles')
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.getenv('STATIC_ROOT', '/path/to/staticfiles')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.getenv('MEDIA_ROOT', '/path/to/mediafiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
