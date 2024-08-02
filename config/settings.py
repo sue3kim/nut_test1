@@ -27,7 +27,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 print("ALLOWED_HOSTS:", os.getenv('ALLOWED_HOSTS'))
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'port-0-nutrition-lzbaziue05007231.sel4.cloudtype.app').split(',')
-
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'nutrition',
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -49,6 +50,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
