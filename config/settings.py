@@ -95,10 +95,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'PORT': os.getenv('DB_PORT', '5432'),
 #     }
 # }
-# import dj_database_url
-# DATABASES = {
-#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-# }
+import dj_database_url
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
