@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'your-secret-key')
 DEBUG = False
 
-ALLOWED_HOST = ['*']
+ALLOWED_HOST = ['3.36.48.172']
 
 CORS_ALLOW_CREDENTIALS = True
 
