@@ -144,3 +144,4 @@ MEDIA_ROOT = os.getenv('MEDIA_ROOT', '/path/to/mediafiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CORS_ALLOW_ALL_ORIGINS = True
